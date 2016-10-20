@@ -36,9 +36,18 @@ class Cipher
 					while word[x] != arr[y]
 
 						y += 1
+
+
 					end
 
-				temp = arr[y+shift]
+				val_test = y + shift
+
+				if(val_test > arr.length-1)
+					val = val_test - arr.length
+					temp = arr[val]
+				else
+					temp = arr[y+shift]
+				end
 
 				if capital
 					temp = temp.upcase

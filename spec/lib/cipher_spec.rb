@@ -38,11 +38,18 @@ describe Cipher do
 
 	end
 
-	xit "can go back to start from z to a" do
+	it "can go back to start from z to a" do
 		c = Cipher.new
 		param = c.caesar_cipher("z",1)
 		expect(param).to eq "a"
 	end
+
+	it "more testing with looping around the array" do
+		c = Cipher.new
+		param = c.caesar_cipher("UVWXyz",5)
+		expect(param).to eq "ZABCde"
+	end
+
 
 
 
