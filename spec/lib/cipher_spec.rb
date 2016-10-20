@@ -50,6 +50,13 @@ describe Cipher do
 		expect(param).to eq "ZABCde"
 	end
 
+	it "accepts any non letter charaters" do
+		c = Cipher.new
+		param = c.caesar_cipher("Big!",2)
+		expect(param).to eq "Dki!"
+	end
+
+
 
 
 

@@ -17,7 +17,7 @@ class Cipher
 			capital = false
 			has_space = false
 
-			if(word[x] == " ")
+			if(word[x] =~ /\W/ )
 				has_space = true
 			end
 
