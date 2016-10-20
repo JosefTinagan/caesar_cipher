@@ -56,7 +56,11 @@ describe Cipher do
 		expect(param).to eq "Dki!"
 	end
 
-
+	it "shifts even with large numbers" do
+		c = Cipher.new
+		param = c.caesar_cipher("Blue!",53)
+		expect(param).to eq "Cmvf!"
+	end
 
 
 
