@@ -9,4 +9,10 @@ describe Cipher do
 		expect(c.say_hello).to eq "Hello"
 
 	end
+
+	it "The caesar_cipher method should accept parameters" do
+		c = Cipher.new
+		param = c.caesar_cipher("test",1)
+		expect(param).to eq "test1"
+	end
 end
