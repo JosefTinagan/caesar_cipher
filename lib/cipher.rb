@@ -3,7 +3,8 @@ class Cipher
 		@arr = (97.chr..122.chr).to_a
 	end
 
-	def caesar_cipher(word,shift)
+	def caesar_cipher(word,shift=0)
+		return nil if word == ""
 		word = word.split("")
 		x = 0
 		result_string = ""
